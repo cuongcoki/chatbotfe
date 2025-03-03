@@ -1,0 +1,52 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "axios": "^1.7.9",
+    "better-react-mathjax": "^2.1.0",
+    "formik": "^2.4.6",
+    "jsonwebtoken": "^9.0.2",
+    "katex": "^0.16.21",
+    "mathlive": "^0.104.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-latex-next": "^3.0.0",
+    "react-markdown": "^9.0.3",
+    "react-mathlive": "^3.0.5-preview.1",
+    "react-mathquill": "^1.0.3",
+    "react-router-dom": "^7.1.5",
+    "react-select": "^5.10.0",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "tailwind-scrollbar-hide": "^2.0.0",
+    "vite-plugin-commonjs": "^0.10.4",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.1.0"
+  }
+}

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* add the code bellow */ 
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+    .markdown > * {
+        all: revert;
+  } 
+
+  .chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .chat-content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  .chat-container {
+    display: flex;
+    flex-direction: column-reverse; /* Đảo ngược để tin nhắn mới nhất hiển thị dưới */
+    overflow-y: auto; /* Cuộn khi nội dung vượt quá */
+    max-height: 80vh; /* Giới hạn chiều cao */
+  }
+    
+}
