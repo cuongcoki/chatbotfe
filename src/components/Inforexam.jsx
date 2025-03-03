@@ -9,19 +9,19 @@ const Inforexam = () => {
     },
     {
       id: 2,
-      name: "Gia sư GPT vật lý",
+      name: "Gia sư GPT Vật Lý",
       link: "https://chatgpt.com/g/g-WJIibbhBt-tro-ly-ai-vat-ly",
       co: "sắp có"
     },
     {
       id: 3,
-      name: "Gia sư GPT hóa",
+      name: "Gia sư GPT Hóa",
       link: "https://chatgpt.com/g/g-igcWkeGfL-gia-su-hoa-hoc",
       co: "sắp có"
     },
     {
       id: 4,
-      name: "Gia sư GPT Tiếng anh ",
+      name: "Gia sư GPT Tiếng Anh ",
       link: "https://chatgpt.com/g/g-rMMA240zV-gia-su-tieng-anh",
       co: "sắp có"
     },

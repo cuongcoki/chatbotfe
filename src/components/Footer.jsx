@@ -59,7 +59,7 @@ const Footer = () => {
                 <p>
                   📞 Liên hệ:{" "}
                   <span className="font-semibold">
-                    0904031103 | cuong@gmail.com
+                    0904031103
                   </span>
                 </p>
               </div>

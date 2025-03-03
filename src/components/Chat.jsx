@@ -68,9 +68,9 @@ const Chat = () => {
   const sendMessage = async () => {
 
     if (input === "") {
-     return toast.error("Hãy hỏi để gửi");
-    } 
-    
+      return toast.error("Hãy hỏi để gửi");
+    }
+
     //input
     if (!input.trim()) return;
     const newMessage = { role: "user", content: fullMessage };
@@ -127,7 +127,13 @@ const Chat = () => {
 
   const formatDate = (isoString) => {
     if (!isoString || isNaN(Date.parse(isoString))) {
-      return "..."; // Trả về dấu "..." nếu timestamp không hợp lệ
+      return (<>
+        <div className="flex  font-bold ">
+          <div className="h-2 w-2 rounded-full animate-bounce [animation-delay:-0.3s]">.</div>
+          <div className="h-2 w-2 rounded-full animate-bounce [animation-delay:-0.15s]">.</div>
+          <div className="h-2 w-2 rounded-full animate-bounce">.</div>
+        </div>
+      </>); // Trả về dấu "..." nếu timestamp không hợp lệ
     }
     const date = new Date(isoString);
     const hours = date.getHours().toString().padStart(2, "0");
@@ -199,7 +205,11 @@ const Chat = () => {
                           className="markdown text-sm sm:text-base"
                         />
                       ) : (
-                        <p>...</p>
+                        <div className="flex  font-bold ">
+                          <div className="h-2 w-2 rounded-full animate-bounce [animation-delay:-0.3s]">.</div>
+                          <div className="h-2 w-2 rounded-full animate-bounce [animation-delay:-0.15s]">.</div>
+                          <div className="h-2 w-2 rounded-full animate-bounce">.</div>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -258,9 +268,9 @@ const Chat = () => {
                 {changeInput ? "Nhập công thức" : "Đóng công thức"}
               </button>
               <button className="transition-all duration-300 hover:scale-110 px-3 py-1 rounded-3xl bg-white/20 text-white shadow-md border border-white/30 text-sm sm:text-base" onClick={() => setShowPopup(true)}>
-                Xem prompt
+                Xem đoạn chat
               </button>
-             
+
 
             </div>
 
@@ -270,9 +280,9 @@ const Chat = () => {
               </button>
             </div>
 
-          
+
           </div>
-         
+
         </div>
         <div className="absolute -inset-1 bg-green-500 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 z-10"></div>
       </div>

@@ -267,12 +267,17 @@ const Register = () => {
               </div>
 
               {/* Nút Đăng ký & Đăng nhập */}
-              <div className="flex justify-between items-center">
-                <button
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mt-4">
+              <button
                   type="submit"
-                  className="w-52 bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition"
+                  disabled={loading}
+                  className={`w-full sm:w-auto px-4 py-2 rounded-md transition text-sm sm:text-base font-medium ${
+                    loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-green-500 text-white hover:bg-green-600"
+                  }`}
                 >
-                  Đăng Ký
+                  {loading ? "Đang đăng ký..." : "Đăng ký"}
                 </button>
 
                 <Link to={"/login"}>

@@ -102,11 +102,6 @@ const Chathistory = () => {
                     <div className="font-semibold text-sm sm:text-base">{item.title}</div>
                     <div className="text-xs sm:text-sm mt-1 flex justify-between items-center text-gray-300">
                       <i>{formatDate(item.timestamp)}</i>
-                      <div className="relative p-1 sm:p-2 bg-white rounded-full">
-                        <span className="absolute top-0 right-0 text-green-500 text-xs sm:text-sm">
-                          {item.session_id}
-                        </span>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -154,7 +149,7 @@ const Chathistory = () => {
                   rel="noopener noreferrer"
                 >
                   <button className="px-3 py-1 rounded-3xl  bg-white/20 text-white shadow-md border border-white/30 text-sm sm:text-base transition-all duration-300 hover:scale-110">
-                  ✨ Hướng dẫn sử dụng - Gia Sư GPT
+                  ✨ Mẹo sử dụng - Gia Sư GPT
                   </button>
                 </a>
               </div>
