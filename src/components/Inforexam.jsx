@@ -44,7 +44,7 @@ const Inforexam = () => {
     },
     {
       link: "https://www.youtube.com/watch?v=sLlc4sCwPlE&ab_channel=GeoInformaticsResearchCenter%28GIRC-TUAF%29",
-      name: "GIRC Year-end Celebration (2025)",
+      name: "Tất niên đầm ấm tại Trung tâm Nghiên cứu Địa tin học",
     },
   ];
   return (
