@@ -78,7 +78,7 @@ const Register = () => {
         const data = await response.json();
 
         if (!response.ok) {
-          toast.error( data?.detail);
+          toast.error(data?.detail);
           throw new Error(
             data?.message ||
             "Đăng ký thất bại! Vui lòng kiểm tra lại thông tin."
@@ -117,179 +117,200 @@ const Register = () => {
 
   // console.log("options", options);
   return (
+
     <div
-      className="flex items-center justify-center min-h-screen w-full bg-cover bg-center p-4 md:p-6 lg:p-8"
+      className=" min-h-screen w-full bg-cover bg-center p-4 md:p-6 lg:p-8"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="relative shadow-xl max-w-md w-full mx-auto">
-        <div 
-        className="relative z-20 bg-green-700 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 p-3 sm:p-4"
-          ref={formRef}>
-          <div className="w-full p-2 sm:p-4 flex flex-col justify-center items-center">
-            <h2 className="text-base sm:text-lg md:text-xl font-semibold text-center text-white leading-tight">
-              ĐĂNG KÝ HỆ THỐNG HỖ TRỢ ÔN TẬP MÔN TOÁN LỚP 12 KỲ THI THPT NĂM
-              2025
-            </h2>
 
-            <form onSubmit={formik.handleSubmit} className="mt-4 space-y-3 w-full">
-              {/* Họ và tên */}
-              <div>
-                <input
-                  type="text"
-                  name="ho_va_ten"
-                  placeholder="Họ và tên"
-                  className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                  value={formik.values.ho_va_ten}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.ho_va_ten && formik.errors.ho_va_ten && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {formik.errors.fullName}
-                  </p>
-                )}
-              </div>
+      <div className="px-4 py-6">
+        <div className="flex flex-col justify-center items-center text-center">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">
+            TRƯỜNG ĐẠI HỌC KỸ THUẬT CÔNG NGHIỆP
+          </h2>
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mt-2">
+            VIỆN NGHIÊN CỨU PHÁT TRIỂN CÔNG NGHỆ CAO KỸ THUẬT CÔNG NGHIỆP
+          </h2>
+        </div>
 
-              {/* Số điện thoại */}
-              <div>
-                <input
-                  type="text"
-                  name="sdt"
-                  placeholder="Số điện thoại"
-                  className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                  value={formik.values.sdt}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.sdt && formik.errors.sdt && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {formik.errors.sdt}
-                  </p>
-                )}
-              </div>
+        <div className="flex flex-col justify-center items-center mt-6 text-center">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+            TRUNG TÂM CÔNG NGHỆ VÀ ĐỔI MỚI SÁNG TẠO
+          </h1>
+        </div>
+      </div>
 
-              {/* Email */}
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.email && formik.errors.email && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {formik.errors.email}
-                  </p>
-                )}
-              </div>
 
-              {/* password */}
-              <div>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Mật khẩu"
-                  className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
-                  value={formik.values.password}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.password && formik.errors.password && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {formik.errors.password}
-                  </p>
-                )}
-              </div>
+      <div className="flex items-center justify-center  p-4 md:p-6 lg:p-8">
+        <div className="relative shadow-xl max-w-md w-full mx-auto">
+          <div
+            className="relative z-20 bg-green-700 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 p-3 sm:p-4"
+            ref={formRef}>
+            <div className="w-full p-2 sm:p-4 flex flex-col justify-center items-center">
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-center text-white leading-tight">
+                ĐĂNG KÝ HỆ THỐNG HỖ TRỢ ÔN TẬP MÔN TOÁN LỚP 12 KỲ THI THPT NĂM
+                2025
+              </h2>
 
-              {/* Facebook */}
-              <div>
-                <input
-                  type="text"
-                  name="facebook"
-                  placeholder="Facebook"
-                  className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                  value={formik.values.facebook}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.facebook && formik.errors.facebook && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {formik.errors.facebook}
-                  </p>
-                )}
-              </div>
+              <form onSubmit={formik.handleSubmit} className="mt-4 space-y-3 w-full">
+                {/* Họ và tên */}
+                <div>
+                  <input
+                    type="text"
+                    name="ho_va_ten"
+                    placeholder="Họ và tên"
+                    className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                    value={formik.values.ho_va_ten}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.touched.ho_va_ten && formik.errors.ho_va_ten && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {formik.errors.fullName}
+                    </p>
+                  )}
+                </div>
 
-              {/* Nơi ở */}
-              <div>
-                <Select
-                  name="noi_o"
-                  options={dataTinh.data.map((province) => ({
-                    id: province.id,
-                    value: province.text,
-                    label: province.text,
-                  }))}
-                  placeholder="Chọn nơi ở..."
-                  isSearchable
-                  className="w-full"
-                  value={dataTinh.data.find((option) => option.value === formik.values.noi_o)}
-                  onChange={(selectedOption) => {
-                    setSelectedProvince(selectedOption);
-                    formik.setFieldValue("noi_o", selectedOption ? selectedOption.value : "");
-                  }}
-                  onBlur={() => formik.setFieldTouched("noi_o", true)}
-                />
-                {formik.touched.noi_o && formik.errors.noi_o && (
-                  <p className="text-red-500 text-sm mt-1">{formik.errors.noi_o}</p>
-                )}
-              </div>
+                {/* Số điện thoại */}
+                <div>
+                  <input
+                    type="text"
+                    name="sdt"
+                    placeholder="Số điện thoại"
+                    className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                    value={formik.values.sdt}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.touched.sdt && formik.errors.sdt && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {formik.errors.sdt}
+                    </p>
+                  )}
+                </div>
 
-              {/* console.log("filteredSchools", filteredSchools.map((school) => school.data.data.map((data) => data.id))) */}
+                {/* Email */}
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.touched.email && formik.errors.email && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {formik.errors.email}
+                    </p>
+                  )}
+                </div>
 
-              <div>
-                <Select
-                  name="ten_truong"
-                  placeholder="Chọn trường THPT..."
-                  isSearchable
-                  options={options}
-                  className="w-full"
-                  value={options.find((option) => option.value === formik.values.ten_truong)}
-                  onChange={(selectedOption) =>
-                    formik.setFieldValue("ten_truong", selectedOption ? selectedOption.value : "")
-                  }
-                  onBlur={() => formik.setFieldTouched("ten_truong", true)}
-                />
-                {formik.touched.ten_truong && formik.errors.ten_truong && (
-                  <p className="text-red-500 text-sm mt-1">{formik.errors.ten_truong}</p>
-                )}
-              </div>
+                {/* password */}
+                <div>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Mật khẩu"
+                    className="w-full p-2 sm:p-3 border rounded-md focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                    value={formik.values.password}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.touched.password && formik.errors.password && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {formik.errors.password}
+                    </p>
+                  )}
+                </div>
 
-              {/* Nút Đăng ký & Đăng nhập */}
-              <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mt-4">
-              <button
-                  type="submit"
-                  disabled={loading}
-                  className={`w-full sm:w-auto px-4 py-2 rounded-md transition text-sm sm:text-base font-medium ${
-                    loading
+                {/* Facebook */}
+                <div>
+                  <input
+                    type="text"
+                    name="facebook"
+                    placeholder="Facebook"
+                    className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                    value={formik.values.facebook}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.touched.facebook && formik.errors.facebook && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {formik.errors.facebook}
+                    </p>
+                  )}
+                </div>
+
+                {/* Nơi ở */}
+                <div>
+                  <Select
+                    name="noi_o"
+                    options={dataTinh.data.map((province) => ({
+                      id: province.id,
+                      value: province.text,
+                      label: province.text,
+                    }))}
+                    placeholder="Chọn nơi ở..."
+                    isSearchable
+                    className="w-full"
+                    value={dataTinh.data.find((option) => option.value === formik.values.noi_o)}
+                    onChange={(selectedOption) => {
+                      setSelectedProvince(selectedOption);
+                      formik.setFieldValue("noi_o", selectedOption ? selectedOption.value : "");
+                    }}
+                    onBlur={() => formik.setFieldTouched("noi_o", true)}
+                  />
+                  {formik.touched.noi_o && formik.errors.noi_o && (
+                    <p className="text-red-500 text-sm mt-1">{formik.errors.noi_o}</p>
+                  )}
+                </div>
+
+                {/* console.log("filteredSchools", filteredSchools.map((school) => school.data.data.map((data) => data.id))) */}
+
+                <div>
+                  <Select
+                    name="ten_truong"
+                    placeholder="Chọn trường THPT..."
+                    isSearchable
+                    options={options}
+                    className="w-full"
+                    value={options.find((option) => option.value === formik.values.ten_truong)}
+                    onChange={(selectedOption) =>
+                      formik.setFieldValue("ten_truong", selectedOption ? selectedOption.value : "")
+                    }
+                    onBlur={() => formik.setFieldTouched("ten_truong", true)}
+                  />
+                  {formik.touched.ten_truong && formik.errors.ten_truong && (
+                    <p className="text-red-500 text-sm mt-1">{formik.errors.ten_truong}</p>
+                  )}
+                </div>
+
+                {/* Nút Đăng ký & Đăng nhập */}
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mt-4">
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className={`w-full sm:w-auto px-4 py-2 rounded-md transition text-sm sm:text-base font-medium ${loading
                       ? "bg-gray-400 cursor-not-allowed"
                       : "bg-green-500 text-white hover:bg-green-600"
-                  }`}
-                >
-                  {loading ? "Đang đăng ký..." : "Đăng ký"}
-                </button>
+                      }`}
+                  >
+                    {loading ? "Đang đăng ký..." : "Đăng ký"}
+                  </button>
 
-                <Link to={"/login"}>
-                  <span className="underline text-gray-200 font-medium">
-                    Bạn đã có tài khoản?
-                  </span>
-                </Link>
-              </div>
-            </form>
+                  <Link to={"/login"}>
+                    <span className="underline text-gray-200 font-medium">
+                      Bạn đã có tài khoản?
+                    </span>
+                  </Link>
+                </div>
+              </form>
+            </div>
           </div>
+          <div className="absolute -inset-1 bg-green-500 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 z-10"></div>
         </div>
-        <div className="absolute -inset-1 bg-green-500 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 z-10"></div>
       </div>
     </div>
   );

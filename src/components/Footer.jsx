@@ -74,7 +74,7 @@ const Footer = () => {
                   Facebook
                 </a>
                 <a
-                  href="https://www.youtube.com/@girctuaf"
+                  href="https://www.youtube.com/@sinhviengirc/shorts"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
