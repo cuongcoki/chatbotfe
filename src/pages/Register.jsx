@@ -129,7 +129,7 @@ const Register = () => {
             TRƯỜNG ĐẠI HỌC KỸ THUẬT CÔNG NGHIỆP
           </h2>
           <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mt-2">
-            VIỆN NGHIÊN CỨU PHÁT TRIỂN CÔNG NGHỆ CAO KỸ THUẬT CÔNG NGHIỆP
+            VIỆN NGHIÊN CỨU PHÁT TRIỂN CÔNG NGHỆ CAO VỀ KỸ THUẬT CÔNG NGHIỆP
           </h2>
         </div>
 
